@@ -1,19 +1,18 @@
 //Sélectionner toutes les options du "select" en html :
 const optSelector = document.querySelectorAll("option");
-let result;
-let button = document.querySelector("button");
+const button = document.querySelector("button");
 
 //L'évènement au clic :
 button.addEventListener("click", function () {
-  
-  //Boucle 'for of' pour enlever la classe 'show' et faire disparaitre les img
+  //Boucle 'while' pour enlever la classe 'show' et faire disparaitre les img
   const list = document.getElementsByClassName("show");
-  for (let item of list) {
-    item.classList.remove("show");
+  while (list.length > 0) {
+    list[0].classList.remove("show");
   }
   //Choisir aléatoirement parmi les 3 options du sélecteur : Pierre/Feuille ou ciseaux
-  let ordinat = optSelector[Math.floor(Math.random() * optSelector.length)];
-
+  let ordinat =
+    optSelector[Math.floor(Math.random() * optSelector.length)].value;
+  console.log(ordinat);
   //En fonction du choix du joueur :
   let joueur = document.getElementById("myChoice").selectedIndex;
   let jChoice = document.getElementsByTagName("option")[joueur].value;
@@ -21,15 +20,21 @@ button.addEventListener("click", function () {
   //Faire apparaitre l'image par rapport au choix du joueur :
   switch (jChoice) {
     case "Rock":
-      document.getElementsByClassName("choicePImgStone")[0].classList.add("show");
+      document
+        .getElementsByClassName("choicePImgStone")[0]
+        .classList.add("show");
       break;
     case "Paper":
-      document.getElementsByClassName("choicePImgPaper")[0].classList.add("show");
+      document
+        .getElementsByClassName("choicePImgPaper")[0]
+        .classList.add("show");
       break;
-      case "Scissor":
-      document.getElementsByClassName("choicePImgScissor")[0].classList.add("show");
-        break;
-        
+    case "Scissor":
+      document
+        .getElementsByClassName("choicePImgScissor")[0]
+        .classList.add("show");
+      break;
+
     default:
       "Rock";
       break;
@@ -37,20 +42,24 @@ button.addEventListener("click", function () {
   //Faire apparaitre l'image par rapport au choix de l'ordinateur
   switch (ordinat) {
     case "Rock":
-      document.getElementsByClassName("choiceRImgStone")[0].classList.add("show");
+      document
+        .getElementsByClassName("choiceRImgStone")[0]
+        .classList.add("show");
       break;
     case "Paper":
-      document.getElementsByClassName("choiceRImgPaper")[0].classList.add("show");
+      document
+        .getElementsByClassName("choiceRImgPaper")[0]
+        .classList.add("show");
       break;
-      case "Scissor":
-      document.getElementsByClassName("choiceRImgScissor")[0].classList.add("show");
-        break;
-
+    case "Scissor":
+      document
+        .getElementsByClassName("choiceRImgScissor")[0]
+        .classList.add("show");
+      break;
     default:
-      "Rock";
       break;
   }
-
+  let result;
   // Les différent cas possible du combat :
   if (jChoice === ordinat) {
     result = "draw";
@@ -75,9 +84,7 @@ button.addEventListener("click", function () {
     case "draw":
       document.getElementsByClassName("draw")[0].classList.add("show");
       break;
-
     default:
-      "draw";
       break;
   }
 });

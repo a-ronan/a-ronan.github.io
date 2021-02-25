@@ -63,6 +63,9 @@ Main
 .versus {
     font-size : 3rem;
 }
+.show {
+    display : flex!important;
+}
 /* Caché puis montré suivant le clic de "match"*/
 .choicePImgPaper,
 .choicePImgStone, 
@@ -78,9 +81,7 @@ Main
     align-items :center;
 }
 /* Classe qui est ajoutée/supprimée via js*/
-.show {
-    display : flex!important;
-}
+
 /****************
 Footer
 ***************/
