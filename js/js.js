@@ -9,6 +9,7 @@ for (let i=0; optSelector.length ; i++)
   //L'évènement au clic :
   button.addEventListener("click", function()
   {
+    
     //Choisir aléatoirement parmi les 3 options du sélecteur : Pierre/Feuille ou ciseaux
     let ordinat = optSelector[Math.floor(Math.random() * optSelector.length)];
 
