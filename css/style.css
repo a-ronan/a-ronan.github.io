@@ -63,7 +63,7 @@ Main
 .versus {
     font-size : 3rem;
 }
-/* Caché puis montré suivant le clic de "envoyer"*/
+/* Caché puis montré suivant le clic de "match"*/
 .choicePImgPaper,
 .choicePImgStone, 
 .choicePImgScissor,
@@ -77,7 +77,10 @@ Main
     justify-content :center;
     align-items :center;
 }
-
+/* Classe qui est ajoutée/supprimée via js*/
+.show {
+    display : flex!important;
+}
 /****************
 Footer
 ***************/
