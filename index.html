@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Pierre-Feuille-Ciseaux</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Pierre-Feuille-Ciseaux<br>
+            </h1>
+            <form>
+                <fieldset class="FieldChoice">
+                    <select id="myChoice">
+                        <option value ="Rock">Rock</option>
+                        <option value ="Paper">Paper</option>
+                        <option value ="Scissor">Scissor</option>
+                    </select>
+                    <div class="icons">
+                        <i class="fas fa-hand-rock Rock"></i>
+                        <i class="fas fa-hand-paper Paper"></i>
+                        <i class="fas fa-hand-scissors Scissor"></i>
+                    </div>
+                    <button>Match !</button>
+                </fieldset>
+            </form>
+        </header>
+        <main>
+            <div class="fight">
+                <!-- Choix du Joueur !-->
+                <div class="joueur">
+                    <picture class="choicePImgStone">
+                        <source media="(max-width: 650px)" srcset="assets/img/Stone-LIT.jpg">
+                        <source media="(Max-width: 1280px)" srcset="assets/img/Stone-MID.jpg">
+                        <source media="(min-width: 1281px)" srcset="assets/img/Stone-BIG.jpg">
+                        <img src="assets/img/Stone-MID.jpg" alt="Pierre">
+                    </picture>
+                    <picture class ="choicePImgPaper">
+                        <source media="(max-width: 650px)" srcset="assets/img/Paper-LIT.jpg">
+                        <source media="(Max-width: 1280px)" srcset="assets/img/Paper-MID.jpg">
+                        <source media="(min-width: 1281px)" srcset="assets/img/Paper-BIG.jpg">
+                        <img src="assets/img/Paper-MID.jpg" alt="Papier">
+                    </picture>
+                    <picture class="choicePImgScissor">
+                        <source media="(max-width: 650px)" srcset="assets/img/Scissor-LIT.jpg">
+                        <source media="(Max-width: 1280px)" srcset="assets/img/Scissor-MID.jpg">
+                        <source media="(min-width: 1281px)" srcset="assets/img/Scissor-BIG.jpg">
+                        <img src="assets/img/Scissor-MID.jpg" alt="Ciseaux">
+                    </picture>
+                </div>
+                    <p class="versus">
+                        V.S
+                    </p>
+                <!-- Choix de l'ordinateur !-->
+                <div class="robot">                
+                    <picture class="choiceRImgStone">
+                        <source media="(max-width: 650px)" srcset="assets/img/Stone-LIT.jpg">
+                        <source media="(Max-width: 1280px)" srcset="assets/img/Stone-MID.jpg">
+                        <source media="(min-width: 1281px)" srcset="assets/img/Stone-BIG.jpg">
+                        <img src="assets/img/Stone-MID.jpg" alt="Pierre">
+                    </picture>
+                    <picture class ="choiceRImgPaper">
+                        <source media="(max-width: 650px)" srcset="assets/img/Paper-LIT.jpg">
+                        <source media="(Max-width: 1280px)" srcset="assets/img/Paper-MID.jpg">
+                        <source media="(min-width: 1281px)" srcset="assets/img/Paper-BIG.jpg">
+                        <img src="assets/img/Paper-MID.jpg" alt="Papier">
+                    </picture>
+                    <picture class="choiceRImgScissor">
+                        <source media="(max-width: 650px)" srcset="assets/img/Scissor-LIT.jpg">
+                        <source media="(Max-width: 1280px)" srcset="assets/img/Scissor-MID.jpg">
+                        <source media="(min-width: 1281px)" srcset="assets/img/Scissor-BIG.jpg">
+                        <img src="assets/img/Scissor-MID.jpg" alt="Ciseaux">
+                    </picture>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <h3>Résultat :</h3>      
+            <div class="msgEnd">
+                <p class="win">YOU WIN !</p>
+                <p class="lose">YOU LOSE !</p>
+                <p class="draw">DRAW !</p>
+            </div>
+        </footer>
+    </div>
+    <script src ="js/js.js"></script>
+</body>
+</html>

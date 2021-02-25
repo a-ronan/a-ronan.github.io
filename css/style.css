@@ -1,0 +1,86 @@
+/****************
+Generalités
+***************/
+html {
+    font-size : 62.5%;
+}
+body {
+    background-color: darkgrey;
+}
+.container {
+    display : flex;
+    width : 80%;
+    margin : auto;
+    flex-direction: column;
+    flex-wrap : wrap;
+}
+header, footer {
+    
+    background: grey;
+}
+header, footer, main {
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+img {
+    max-width : 50%;
+}
+header, main {
+margin-bottom : 0.5rem;
+}
+/*@media screen and (max-width : 850px) {*/
+/****************
+Header
+***************/
+header, footer, fieldset, select, button {
+    border : none;
+    border-radius : 20px;
+}
+h1 {
+    text-align : center;
+}
+i {
+    font-size : 2rem;
+    color : darkorange;
+}
+fieldset {
+    display : flex;
+    justify-content : space-around;
+}
+#choice:selected {
+    font-size: 2rem;
+    font-style: gold;
+}
+/****************
+Main
+***************/
+.fight {
+    display : flex;
+    flex-direction: row;
+    flex-wrap : nowrap;
+    margin : auto;
+}
+.versus {
+    font-size : 3rem;
+}
+/* Caché puis montré suivant le clic de "envoyer"*/
+.choicePImgPaper,
+.choicePImgStone, 
+.choicePImgScissor,
+.versus, 
+.choiceRImgPaper,
+.choiceRImgStone,
+.choiceRImgScissor,
+.win, .lose, .draw
+{
+    display: none;
+    justify-content :center;
+    align-items :center;
+}
+
+/****************
+Footer
+***************/
+h3, footer p {
+    text-align : center;
+}
