@@ -59,6 +59,15 @@ Main
     flex-direction: row;
     flex-wrap : nowrap;
     margin : auto;
+    justify-content: space-around;
+}
+.joueur, .robot {
+    display : flex;
+    flex-direction :column;
+}
+h2 {
+    display : flex;
+    justify-content : center;
 }
 .versus {
     font-size : 3rem;
