@@ -63,6 +63,7 @@ Main
 .versus {
     font-size : 3rem;
 }
+/* Classe qui est ajoutée/supprimée via js*/
 .show {
     display : flex!important;
 }
@@ -80,7 +81,6 @@ Main
     justify-content :center;
     align-items :center;
 }
-/* Classe qui est ajoutée/supprimée via js*/
 
 /****************
 Footer
